@@ -1,2 +1,0 @@
-#!/bin/bash
-/BiO/Share/Tools/gatk-4.6.1.0/gatk ApplyBQSR --bqsr-recal-file /BiO/Live/jwlee230/BME610/week02/12N.Sort.MarkDuplicates.BQSR.table --input /BiO/Live/jwlee230/BME610/week02/12N.Sort.MarkDuplicates.bam --output /BiO/Live/jwlee230/BME610/week02/12N.Sort.MarkDuplicates.BQSR.bam --reference /BiO/Share/Tools/gatk-bundle/hg38/Homo_sapiens_assembly38.fasta --create-output-bam-index true

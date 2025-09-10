@@ -1,2 +1,0 @@
-#!/bin/bash
-/BiO/Share/Tools/samtools-1.21/samtools sort -l 9 --threads 10 --reference /BiO/Share/Tools/gatk-bundle/hg38/Homo_sapiens_assembly38.fasta --write-index -o /BiO/Live/jwlee230/BME610/week02/12N.Sort.bam /BiO/Live/jwlee230/BME610/week02/12N.bam

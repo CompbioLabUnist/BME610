@@ -18,10 +18,9 @@ def main():
     args = parse_arguments()
 
     input_data = pandas.read_csv(args.input, sep="\t", comment="#")
-    input_data = input_data.loc[~(input_data["HGVSp_Short"].isna())]
     print(input_data)
 
-    gene_data = input_data[(input_data["Hugo_Symbol"] == args.gene)]
+    gene_data = input_data[(input_data["Hugo_Symbol"] == args.gene) & ~(input_data["HGVSp_Short"].isna())]
     print(gene_data)
 
     proteins = ""

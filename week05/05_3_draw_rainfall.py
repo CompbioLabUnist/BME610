@@ -85,5 +85,6 @@ def main():
         fig.savefig(f"{chromosome}.png")
         matplotlib.pyplot.close(fig)
 
+
 if __name__ == "__main__":
     main()

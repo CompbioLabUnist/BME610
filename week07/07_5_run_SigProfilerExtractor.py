@@ -8,7 +8,7 @@ def parse_arguments():
 
     parser.add_argument("input", help="Input directory")
     parser.add_argument("output", help="Output directory")
-    parser.add_argument("--cpu", help="Number of CPUs to use", type=int, default=10)
+    parser.add_argument("--cpu", help="Number of CPUs to use", type=int, default=5)
 
     return parser.parse_args()
 

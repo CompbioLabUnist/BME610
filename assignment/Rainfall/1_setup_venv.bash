@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -m venv --upgrade-deps --prompt mutation .
+python3 -m venv --upgrade-deps --prompt rainfall .

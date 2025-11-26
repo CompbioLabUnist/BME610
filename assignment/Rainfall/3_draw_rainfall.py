@@ -64,7 +64,7 @@ def main():
     input_data["Dis"] = distance_list
     print(input_data)
 
-    chromosome_list = sorted(set(input_data["CHROM"]))
+    chromosome_list = sorted(list(filter(lambda x: "_" not in x, set(input_data["CHROM"]))))
     print(len(chromosome_list), chromosome_list)
 
     coloring = {"C>A": "tab:blue", "C>G": "tab:orange", "C>T": "tab:green", "T>A": "tab:purple", "T>C": "tab:brown", "T>G": "tab:olive", "Indel": "tab:gray"}
@@ -74,12 +74,13 @@ def main():
 
         fig, ax = matplotlib.pyplot.subplots(figsize=(32, 18))
 
-        seaborn.scatterplot(data=chromosome_data, x="POS", y="Dis", hue="Mut", style="Mut", palette=coloring, legend="full", s=1000, ax=ax)
+        seaborn.scatterplot(data=chromosome_data, x="POS", y="Dis", hue="Mut", hue_order=sorted(mutation_set), style="Mut", palette=coloring, legend="full", s=1000, edgecolors=None, ax=ax)
 
         matplotlib.pyplot.title(chromosome)
         matplotlib.pyplot.xlabel("Mutation position (bp)")
         matplotlib.pyplot.ylabel("Distance (bp)")
         matplotlib.pyplot.yscale("log", base=10)
+        matplotlib.pyplot.legend(loc="upper right")
 
         matplotlib.pyplot.tight_layout()
         fig.savefig(f"{chromosome}.png")

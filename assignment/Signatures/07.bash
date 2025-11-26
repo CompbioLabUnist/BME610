@@ -17,4 +17,6 @@ python3 -c "from SigProfilerExtractor import sigpro; sigpro.sigProfilerExtractor
 rm -rfv Plot
 SigProfilerPlotting plotSBS --savefig_format 'png' --dpi 600 "$(realpath ./output/SBS/SAMPLE.SBS96.exome)" "$(realpath Plot)" 'SAMPLE' '96'
 SigProfilerPlotting plotSBS --savefig_format 'png' --dpi 600 "$(realpath ./output/SBS/SAMPLE.SBS6.exome)" "$(realpath Plot)" 'SAMPLE' '6'
-mv -vf ./*.png Plot
+mv -vf ./PlotSBS_96_plots_12.png Plot/SBS_96_plots_12.png
+cp -vf "$(realpath ./output/SBS96/Suggested_Solution/COSMIC_SBS96_Decomposed_Solution/SBS96_Decomposition_Plots.pdf)" Plot
+cp -vf "$(realpath output/SBS96/Suggested_Solution/COSMIC_SBS96_Decomposed_Solution/Signatures/SBS_96_plots_COSMIC_SBS96.pdf)" Plot

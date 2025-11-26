@@ -29,7 +29,7 @@ def main():
     proteins = proteins.strip()
 
     with open(f"{args.gene}.sh", "w") as f:
-        f.write(f"/BiO/Share/Tools/lollipops -legend -labels -o {args.gene}.png -dpi=600 -show-motifs {args.gene} {proteins}")
+        f.write(f"/BiO/Share/Tools/lollipops -legend -labels -o {args.gene}.png -dpi=300 -show-motifs {args.gene} {proteins}")
 
     os.system(f"bash {args.gene}.sh")
 
